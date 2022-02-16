@@ -16,41 +16,44 @@
         <section class="container">
             <h1 class="text-center pt-5">Calculate Monthly Cost</h1>
             <div class="w-75 m-auto mt-3 marq">
-                <marquee behavior="" direction="left"><p class="mb-0">Calculate your monthly const and save money for your future.</p>
+                <marquee behavior="" direction="left"><p class="mb-0">Calculate your monthly cost and save money for your future.</p>
                 </marquee>
             </div>
             <div class="mt-5">
                 <div class="row">
-                    <div class="col-md-6 ">
+                    <div class="col-md-7 ">
                         <img class="img-fluid h-100" src="img/money.jpg" alt="">
                     </div>
-                    <div class="col-md-6 ">
+                    <div class="col-md-5 ">
                         <div class="text-center mb-3">
                             <h5 class="mb-3">Monthly Income</h5>
-                            <label><span class="input1">Income</span> <input type="text"></label>
+                            <label><span class="input1">Income</span> <input id="month-input" type="text"></label>
                         </div>
                         <div class="text-center">
                             <h5 class="mb-3">Expenses</h5>
-                            <p class="input"><span class="input1">Food:</span> <input  type="text"></p>
-                            <p class="input"><span class="input1">Rent:</span> <input  type="text"></p>
-                            <p class="input"><span class="input1">Clothes:</span> <input  type="text"></p>
+                            <p class="input"><span class="input1">Food:</span> <input id="food-input" type="text"></p>
+                            <p class="input"><span class="input1">Rent:</span> <input id="rent-input" type="text"></p>
+                            <p class="input"><span class="input1">Clothes:</span> <input id="cloth-input" type="text"></p>
                             <button id="calculate" class="btn-cal">Calculate</button>
                         </div>
                         <div class="text-center">
-                            <h5 class="mb-2 mt-4">Total Expenses: <span>00</span></h5>
-                            <h5>Balance : <span>00</span></h5>
+                            <h5 class="mb-2 mt-4">Total Expenses: <span id="total-expense">00</span></h5>
+                            <h5>Balance : <span id="total-balance">00</span></h5>
                         </div>
                         <div class="text-center">
-                            <p><label>Save: <input class="save-input" type="text"></label><span class="perchantages">%</span><button class="btn-cal">Save</button></p>
+                            <p><label>Save: <input id="saving-input" class="save-input" type="text"></label><span class="perchantages">%</span><button id="saving-btn" class="btn-cal">Save</button></p>
                         </div>
                         <div class="text-center">
-                            <h5>Saving Amount: <span>00</span></h5>
-                            <h5>Remaining Balance: <span>00</span></h5>
+                            <h5>Saving Amount: <span id="saving-amount">00</span></h5>
+                            <h5>Remaining Balance: <span id="remaining-balance">00</span></h5>
                         </div>
                     </div>
                 </div>    
             </div>
         </section>
     </main>
+
+    <!-- script file link  -->
+    <script src="index.js"></script>
 </body>
 </html>
