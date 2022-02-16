@@ -5,8 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- bootstrap css link  -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- css file link  -->
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    
+    <main>
+        <!-- calculate section start here  -->
+        <section class="container">
+            <h1 class="text-center pt-5">Calculate Monthly Cost</h1>
+            <div class="w-75 m-auto mt-3 marq">
+                <marquee behavior="" direction="left"><p class="mb-0">Calculate your monthly const and save money for your future.</p>
+                </marquee>
+            </div>
+            <div class="mt-5">
+                <div class="row">
+                    <div class="col-md-6 ">
+                        <img class="img-fluid h-100" src="img/money.jpg" alt="">
+                    </div>
+                    <div class="col-md-6 ">
+                        <div class="text-center mb-3">
+                            <h5 class="mb-3">Monthly Income</h5>
+                            <label><span class="input1">Income</span> <input type="text"></label>
+                        </div>
+                        <div class="text-center">
+                            <h5 class="mb-3">Expenses</h5>
+                            <p class="input"><span class="input1">Food:</span> <input  type="text"></p>
+                            <p class="input"><span class="input1">Rent:</span> <input  type="text"></p>
+                            <p class="input"><span class="input1">Clothes:</span> <input  type="text"></p>
+                            <button id="calculate" class="btn-cal">Calculate</button>
+                        </div>
+                        <div class="text-center">
+                            <h5 class="mb-2 mt-4">Total Expenses: <span>00</span></h5>
+                            <h5>Balance : <span>00</span></h5>
+                        </div>
+                        <div class="text-center">
+                            <p><label>Save: <input class="save-input" type="text"></label><span class="perchantages">%</span><button class="btn-cal">Save</button></p>
+                        </div>
+                        <div class="text-center">
+                            <h5>Saving Amount: <span>00</span></h5>
+                            <h5>Remaining Balance: <span>00</span></h5>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </section>
+    </main>
 </body>
 </html>

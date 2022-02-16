@@ -1,0 +1,51 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+main{
+    background-color: #fafafa;
+    height:100%;
+    padding: 40px 0 90px 0;
+    
+}
+input{
+    border: 0;
+    background:rgba(163, 163, 165, 0.431);
+    padding: 7px 5px;
+}
+input:focus{
+    outline: none;
+}
+.marq{
+    background-color:#3f9af0;
+    color:white;
+    padding: 10px 0;
+}
+
+.input1{
+    display: inline-block;
+    width: 63px;
+}
+
+.btn-cal{
+    background:#3f9af0;
+    padding:7px 17px;
+    color: white;
+    margin-top: 7px;
+    border: none;
+    font-size: 19px;
+    border-radius: 3px;
+}
+
+.save-input{
+    width: 90px;
+}
+.perchantages{
+    margin: 0 15px;
+}
+
