@@ -10,8 +10,12 @@ function getMonthValue(monthInput){
 
 // get expense input value 
 function getInput(input1,input2,input3){
+    // debugger;
     const foodInput=document.getElementById(input1);
+    
+    console.log(typeof isNaN(foodInput.value))
     const newFoodInput=parseFloat(foodInput.value);
+    console.log(typeof newFoodInput)
     const rentInput=document.getElementById(input2);
     const newRentInput=parseFloat(rentInput.value);
     const clothInput=document.getElementById(input3);
@@ -19,22 +23,48 @@ function getInput(input1,input2,input3){
     foodInput.value=''
     rentInput.value=''
     clothInput.value=''
+    // validate all input value 
+    console.log(typeof foodInput.value);
+    if(isNaN(newFoodInput) && isNaN(newRentInput) && isNaN(newClothInput)){
+        return alert('Please fill up the expense form');
+    }
+    if(isNaN(newFoodInput)){
+        document.querySelectorAll('.food').setAttribute('id','food-validation');
+        
+    }
+    if(isNaN(newRentInput)){
+        document.querySelectorAll('.food')[1].setAttribute('id','rent-validation');
+       
+    }
+    if(isNaN(newClothInput)){
+        document.querySelectorAll('.food')[2].setAttribute('id','cloth-validation');
+        
+    }
+    else{
+        const total=(newFoodInput + newRentInput + newClothInput)
+        return total;
+    }
+        
+    
     // calculate expense input value 
-    const total=(newFoodInput + newRentInput + newClothInput)
-    return total;
+    
 }
 // calculate month and expense input value 
 function expensesInput(){
-    const input=getInput('food-input','rent-input','cloth-input')
-    const monthIncome=getMonthValue('month-input');
-    const totalExpens=document.getElementById('total-expense');
-    const totalBalance=document.getElementById('total-balance');
-    // calculate total balance 
-    const fullTotal=(monthIncome - input);
-   
-    console.log(fullTotal)
-    totalExpens.innerText=input;
-    totalBalance.innerText=fullTotal
+        const input=getInput('food-input','rent-input','cloth-input');
+        console.log(typeof input);
+        if(typeof input == 'undefined'){
+            return false;
+        }
+        const monthIncome=getMonthValue('month-input');
+        const totalExpens=document.getElementById('total-expense');
+        const totalBalance=document.getElementById('total-balance');
+        // calculate total balance 
+        const fullTotal=(monthIncome - input);
+        console.log(fullTotal)
+        totalExpens.innerText=input;
+        totalBalance.innerText=fullTotal
+    
 
 }
 
