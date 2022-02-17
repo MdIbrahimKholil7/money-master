@@ -19,7 +19,7 @@
                 <marquee class="p-0" behavior="" direction="left"><p class="mb-0">Calculate your monthly cost and save money for your future.</p>
                 </marquee>
             </div>
-            <div class="mt-5">
+            <div class="mt-5 mb-4">
                 <div class="row">
                     <div class="col-md-7 ">
                         <img class="img-fluid h-100" src="img/money.jpg" alt="">
@@ -42,6 +42,7 @@
                         <div class="text-center">
                             <h5 class="mb-2 mt-4">Total Expenses: <span id="total-expense">00</span></h5>
                             <h5>Balance : <span id="total-balance">00</span></h5>
+                            <!-- <small>Your Extra Cost is <span id="extra-cost">00</span></small> -->
                         </div>
                         <div class="text-center">
                             <p><label>Save: <input id="saving-input" class="save-input" type="text"></label><span class="perchantages">%</span><button id="saving-btn" class="btn-cal">Save</button></p>
@@ -49,11 +50,14 @@
                         <div class="text-center">
                             <h5>Saving Amount: <span id="saving-amount">00</span></h5>
                             <h5>Remaining Balance: <span id="remaining-balance">00</span></h5>
+                           
                         </div>
                     </div>
                 </div>    
             </div>
+            <h4 id="saving-alert" class="save text-center">You don't have sufficent balance for saving</h4>
         </section>
+
     </main>
 
     <!-- script file link  -->
