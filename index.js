@@ -132,6 +132,7 @@ function calculateSaving(input){
      // calculate totalSaving value 
      if(newTotalBalance == 0 || remainingBalance < 0){
         document.getElementById('remaining-balance').innerText='00';
+        savingAmount.innerText='00'
         return document.getElementById('saving-alert').style.display='block';
       }else{
           document.getElementById('saving-alert').style.display='none';
