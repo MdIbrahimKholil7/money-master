@@ -41,7 +41,7 @@ function getInput(input1,input2,input3){
     else{
         document.querySelectorAll('.food')[1].removeAttribute('id');
     }
-    if(isNaN(newClothInput) && (newClothInput < 0)){
+    if(isNaN(newClothInput) || (newClothInput < 0)){
       return  document.querySelectorAll('.food')[2].setAttribute('id','cloth-validation');
     }
     else{
