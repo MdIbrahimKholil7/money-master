@@ -83,6 +83,8 @@ function expensesInput(){
         //    document.getElementById('extra-cost').style.display='block'
         //     console.log('extra cost');
         // console.log(extraCost.innerText)
+        // extraCost.classList.add("extra-cost");
+
         }else{
             // extraCost.innerText=00;
             // extraCost.removeAttribute('class');
@@ -125,15 +127,19 @@ function calculateSaving(input){
     // get total balance 
     const totalBalance=document.getElementById('total-balance'); 
     const newTotalBalance=parseFloat(totalBalance.innerText);
-    // calculate totalSaving value 
-    if(newTotalBalance == 0){
-      return document.getElementById('saving-alert').style.display='block';
-    }else{
-        document.getElementById('saving-alert').style.display='none';
-    }
     const totalSaving=((montIncome / 100) * newSaving).toFixed(2);
+    const remainingBalance=(newTotalBalance - totalSaving).toFixed(2)
+     // calculate totalSaving value 
+     if(newTotalBalance == 0 || remainingBalance < 0){
+        document.getElementById('remaining-balance').innerText='00';
+        return document.getElementById('saving-alert').style.display='block';
+      }else{
+          document.getElementById('saving-alert').style.display='none';
+      }
+      //  saving amount 
     savingAmount.innerText=totalSaving;
-    document.getElementById('remaining-balance').innerText=(newTotalBalance - totalSaving).toFixed(2)
+    //   remaing balance 
+    document.getElementById('remaining-balance').innerText=remainingBalance;
     console.log(totalSaving)
 }
 
