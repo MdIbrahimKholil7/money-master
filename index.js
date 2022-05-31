@@ -77,20 +77,20 @@ function expensesInput(){
         const extraCost= document.getElementById('extra-cost');
         if(fullTotal < 0){    
             alert('Your extra cost is' + Math.abs(fullTotal))       
-           // extraCost.setAttribute('class','extra-cost');
-          // extraCost.innerText=Math.abs(fullTotal);      
-        //    document.getElementById('extra-cost').innerText=Math.abs(fullTotal);
-        //    document.getElementById('extra-cost').style.display='block'
-        //     console.log('extra cost');
-        // console.log(extraCost.innerText)
-        // extraCost.classList.add("extra-cost");
+           extraCost.setAttribute('class','extra-cost');
+          extraCost.innerText=Math.abs(fullTotal);      
+           document.getElementById('extra-cost').innerText=Math.abs(fullTotal);
+           document.getElementById('small').style.display='block'
+            console.log('extra cost');
+        console.log(extraCost.innerText)
+        extraCost.classList.add("extra-cost");
 
         }else{
             // extraCost.innerText=00;
             // extraCost.removeAttribute('class');
             // extraCost.setAttribute('class','extrsa-cost2');
             // extraCost.style.display='none';
-            
+            document.getElementById('small').style.display='none'
         }
         // console.log(fullTotal)
         totalExpens.innerText=input;

@@ -32,6 +32,8 @@ input:focus{
 .input1{
     display: inline-block;
     width: 63px;
+    text-align: right;
+    margin-right: 20px;
 }
 
 .btn-cal{
@@ -87,8 +89,16 @@ input:focus{
 
 .extra-cost{
     font-weight: 800;
+    display: block;
 }
 .extra-cost2{
-    display: none;
+    display:none;
 }
-
+.small{
+    color: red;
+    display:none;
+}
+#extra-cost{
+    color:red;
+    font-weight: 800;
+}
